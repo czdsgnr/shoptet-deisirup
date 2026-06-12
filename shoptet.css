@@ -12,23 +12,32 @@
 }
 
 /* ---- Přihlašovací popup: vzhled + benefity + Vytvořit účet ---- */
-#login.dei-login-ready .popup-widget-inner {
-  display: flex;
+/* layout se řídí přítomností panelu benefitů (ne třídou na #login) */
+#login.login-widget:has(.dei-login-benefits) {
+  width: auto !important;
+  max-width: 94vw;
+}
+#login .popup-widget-inner:has(.dei-login-benefits) {
+  display: flex !important;
   flex-wrap: wrap;
-  width: 660px;
-  max-width: 92vw;
-  padding: 0;
+  align-items: stretch;
+  width: 680px !important;
+  max-width: 94vw;
+  padding: 0 !important;
   border-radius: 14px;
-  overflow: hidden;
+  overflow: visible;
   background: #fff;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
 }
 
 /* levý sloupec – přihlášení */
 #login .dei-login-main {
-  flex: 1 1 330px;
+  flex: 1 1 340px;
+  min-width: 0;
   padding: 26px 26px 28px;
   box-sizing: border-box;
+  background: #fff;
+  border-radius: 14px 0 0 14px;
 }
 #login #loginHeading {
   font-size: 20px;
@@ -89,11 +98,13 @@
 
 /* pravý sloupec – benefity */
 #login .dei-login-benefits {
-  flex: 1 1 270px;
+  flex: 1 1 280px;
+  min-width: 0;
   padding: 26px 26px 28px;
   box-sizing: border-box;
   background: linear-gradient(160deg, #fff6ee, #ffeede);
   border-left: 1px solid #f0e2d4;
+  border-radius: 0 14px 14px 0;
 }
 #login .dei-login-benefits h3 {
   font-size: 18px;
@@ -149,7 +160,7 @@
 
 /* mobil – sloupce pod sebe */
 @media (max-width: 600px) {
-  #login.dei-login-ready .popup-widget-inner { width: 360px; }
+  #login .popup-widget-inner:has(.dei-login-benefits) { width: 340px !important; }
   #login .dei-login-benefits {
     border-left: 0;
     border-top: 1px solid #f0e2d4;
