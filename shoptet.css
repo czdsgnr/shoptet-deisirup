@@ -16,13 +16,17 @@
 #login.login-widget:has(.dei-login-benefits) {
   width: auto !important;
   max-width: 94vw;
+  /* ukotvit pravým okrajem → popup se rozbaluje doleva, nepřeteče vpravo */
+  left: auto !important;
+  right: 0 !important;
 }
 #login .popup-widget-inner:has(.dei-login-benefits) {
   display: flex !important;
   flex-wrap: wrap;
   align-items: stretch;
-  width: 680px !important;
+  width: 660px !important;
   max-width: 94vw;
+  margin-left: auto;
   padding: 0 !important;
   border-radius: 14px;
   overflow: visible;
