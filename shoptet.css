@@ -11,6 +11,14 @@
   color: #FFC107 !important;
 }
 
+/* ---- Košík: progress bar do dopravy zdarma zeleně ---- */
+#cart-widget .cart-free-shipping::before {
+  background-color: #66bf3a !important; /* vyplněná část = zelená */
+}
+#cart-widget .cart-free-shipping::after {
+  background-color: #d8efcb !important; /* dráha = jemně zelená */
+}
+
 /* ---- Přihlašovací popup: vzhled + benefity + Vytvořit účet ---- */
 /* layout se řídí přítomností panelu benefitů (ne třídou na #login) */
 #login.login-widget:has(.dei-login-benefits) {
