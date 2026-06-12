@@ -11,6 +11,19 @@
   color: #FFC107 !important;
 }
 
+/* ---- Proč Dei: ikony 80×80 bez podkladu ---- */
+.dei-why-ico {
+  width: 80px !important;
+  height: 80px !important;
+  background: none !important;
+  border-radius: 0 !important;
+}
+.dei-why-ico img {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: contain;
+}
+
 /* ---- Košík v hlavičce: zvýraznění + podbarvení + zelený počet ---- */
 .header-top .click-cart a.btn.cart-count {
   background-color: #e9f5df !important; /* jemně zelená */
