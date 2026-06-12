@@ -4,6 +4,13 @@
    Deploy:  edit → commit → push → ~1-2 min build → refresh
    ============================================================ */
 
+/* ---- Recenze: všechny hvězdičky zlaté ---- */
+.dei-stars,
+.dei-reviews-rating .dei-stars,
+.dei-rev .dei-stars {
+  color: #FFC107 !important;
+}
+
 /* ---- Otevírací doba vedle telefonu v horní liště ---- */
 .top-navigation-contacts .dei-opening-hours {
   display: inline-flex;
