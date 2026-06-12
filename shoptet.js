@@ -62,18 +62,31 @@
     return true;
   }
 
+  // Shoptet překresluje obsah login popupu při otevření → re-inject přes observer
+  var loginObserver = null;
+  function syncLogin() {
+    var login = document.getElementById('login');
+    if (!login) return;
+    if (loginObserver) loginObserver.disconnect();
+    buildLoginBenefits();
+    if (!loginObserver) {
+      loginObserver = new MutationObserver(syncLogin);
+    }
+    loginObserver.observe(login, { childList: true, subtree: true });
+  }
+
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
   }
   ready(function () {
     injectOpeningHours();
-    buildLoginBenefits();
-    // fallback: prvky se mohou dorenderovat později
+    syncLogin();
+    // fallback: horní lišta / login se mohou dorenderovat později
     var tries = 0;
     var iv = setInterval(function () {
       injectOpeningHours();
-      buildLoginBenefits();
+      syncLogin();
       if (++tries > 20) clearInterval(iv);
     }, 250);
   });
