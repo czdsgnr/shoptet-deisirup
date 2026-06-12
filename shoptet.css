@@ -4,6 +4,32 @@
    Deploy:  edit → commit → push → ~1-2 min build → refresh
    ============================================================ */
 
-/* Sem přijdou jednotlivé moduly úprav.
-   Drž scoped selektory (např. #register-form, .reg-ucet …),
-   ať se přepisy nepropisují do zbytku motivu. */
+/* ---- Otevírací doba vedle telefonu v horní liště ---- */
+.top-navigation-contacts .dei-opening-hours {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 14px;
+  font-size: 13px;
+  line-height: 1;
+  color: inherit;
+  white-space: nowrap;
+}
+.top-navigation-contacts .dei-opening-hours svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.85;
+}
+
+/* Na úzkých displejích schovat, ať se lišta neláme */
+@media (max-width: 767px) {
+  .top-navigation-contacts .dei-opening-hours {
+    display: none;
+  }
+}
