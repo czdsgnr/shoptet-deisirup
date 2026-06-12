@@ -11,6 +11,24 @@
   color: #FFC107 !important;
 }
 
+/* ---- Košík v hlavičce: zvýraznění + podbarvení + zelený počet ---- */
+.header-top .click-cart a.btn.cart-count {
+  background-color: #eef0f3 !important;
+  border-radius: 999px !important;
+  padding: 9px 20px 9px 18px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: background-color 0.15s, box-shadow 0.15s;
+}
+.header-top .click-cart a.btn.cart-count:hover {
+  background-color: #e5e8ee !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+/* počet objednávek = zelené kolečko */
+.header-top .click-cart a.btn.cart-count i {
+  background-color: #66bf3a !important;
+  color: #fff !important;
+}
+
 /* ---- Košík: progress bar do dopravy zdarma zeleně ---- */
 #cart-widget .cart-free-shipping::before {
   background-color: #66bf3a !important; /* vyplněná část = zelená */
