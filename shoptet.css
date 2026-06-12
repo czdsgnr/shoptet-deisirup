@@ -18,7 +18,7 @@
   max-width: 94vw;
   /* ukotvit pravým okrajem → popup se rozbaluje doleva, nepřeteče vpravo */
   left: auto !important;
-  right: 0 !important;
+  right: 40px !important;
 }
 #login .popup-widget-inner:has(.dei-login-benefits) {
   display: flex !important;
