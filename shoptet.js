@@ -24,16 +24,57 @@
     return true;
   }
 
+  /* ---- Přihlašovací popup: benefity + tlačítko Vytvořit účet ---- */
+  var LOGIN_BENEFITS = [
+    'Rychlejší objednávka bez opisování údajů',
+    'Přehled všech objednávek na jednom místě',
+    'Slevy a akce jen pro registrované',
+    'Oblíbené příchutě uložené pro příště'
+  ];
+
+  function buildLoginBenefits() {
+    var inner = document.querySelector('#login .popup-widget-inner');
+    if (!inner || inner.querySelector('.dei-login-benefits')) return false;
+    var login = inner.querySelector('#customerLogin');
+    if (!login) return false;
+
+    // levý sloupec = nadpis + formulář
+    var main = document.createElement('div');
+    main.className = 'dei-login-main';
+    var heading = inner.querySelector('#loginHeading');
+    if (heading) main.appendChild(heading);
+    main.appendChild(login);
+    inner.appendChild(main);
+
+    // pravý sloupec = benefity + CTA
+    var aside = document.createElement('aside');
+    aside.className = 'dei-login-benefits';
+    var items = LOGIN_BENEFITS.map(function (t) {
+      return '<li>' + t + '</li>';
+    }).join('');
+    aside.innerHTML =
+      '<h3>Nový zákazník?</h3>' +
+      '<ul>' + items + '</ul>' +
+      '<a class="dei-create-account" href="/registrace/" rel="nofollow">Vytvořit účet</a>';
+    inner.appendChild(aside);
+
+    inner.parentNode.classList.add('dei-login-ready');
+    return true;
+  }
+
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
   }
   ready(function () {
-    if (injectOpeningHours()) return;
-    // fallback: lišta se může dorenderovat později
+    injectOpeningHours();
+    buildLoginBenefits();
+    // fallback: prvky se mohou dorenderovat později
     var tries = 0;
     var iv = setInterval(function () {
-      if (injectOpeningHours() || ++tries > 20) clearInterval(iv);
+      injectOpeningHours();
+      buildLoginBenefits();
+      if (++tries > 20) clearInterval(iv);
     }, 250);
   });
 
