@@ -14,12 +14,12 @@
 }
 
 /* ---- Upsell (Ostatní zákazníci také nakoupili) – detail i modal po Do košíku ---- */
-.products-related {
+#products.products-related {
   display: flex !important;
   flex-direction: column;
   gap: 4px;
 }
-.products-related .product {
+#products.products-related .product {
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
@@ -27,9 +27,9 @@
   float: none !important;
   border-bottom: 1px solid #ececec;
 }
-.products-related .product:last-child { border-bottom: 0; }
+#products.products-related .product:last-child { border-bottom: 0; }
 
-.products-related .p {
+#products.products-related .p {
   display: flex !important;
   flex-direction: row !important;
   align-items: center;
@@ -40,7 +40,7 @@
   text-align: left !important;
 }
 /* miniatura vlevo */
-.products-related .p > .image {
+#products.products-related .p > .image {
   flex: 0 0 90px !important;
   width: 90px !important;
   height: 90px !important;
@@ -52,7 +52,7 @@
   align-items: center;
   justify-content: center;
 }
-.products-related .p > .image img {
+#products.products-related .p > .image img {
   max-width: 100% !important;
   max-height: 100% !important;
   width: auto !important;
@@ -61,34 +61,34 @@
   margin: 0 !important;
 }
 /* prostřední sloupec: název → hvězdy → cena → skladem */
-.products-related .p > .p-in {
+#products.products-related .p > .p-in {
   flex: 1 1 auto;
   min-width: 0;
   display: block;
   padding: 0;
   text-align: left !important;
 }
-.products-related .p .name { font-size: 15px; line-height: 1.3; }
-.products-related .p .ratings-wrapper { margin: 3px 0 4px; }
-.products-related .p .p-bottom { margin: 0; }
-.products-related .p .prices { margin: 0; }
-.products-related .p .price-final strong { font-size: 17px; }
+#products.products-related .p .name { font-size: 15px; line-height: 1.3; }
+#products.products-related .p .ratings-wrapper { margin: 3px 0 4px; }
+#products.products-related .p .p-bottom { margin: 0; }
+#products.products-related .p .prices { margin: 0; }
+#products.products-related .p .price-final strong { font-size: 17px; }
 /* skladovost zpět – malá, pod cenou */
-.products-related .p .p-tools { display: block !important; margin-top: 4px; }
-.products-related .p .availability { font-size: 12px; }
+#products.products-related .p .p-tools { display: block !important; margin-top: 4px; }
+#products.products-related .p .availability { font-size: 12px; }
 /* tlačítko „+" vpravo (modal ho dává absolute → vrátit do řádku) */
-.products-related .p > .product-btn,
-.products-related .product > .product-btn {
+#products.products-related .p > .product-btn,
+#products.products-related .product > .product-btn {
   position: static !important;
   flex: 0 0 auto;
   margin-left: auto;
   align-self: center;
 }
 /* schovat jen balast */
-.products-related .p .p-desc,
-.products-related .p .price-additional,
-.products-related .p > .p-code,
-.products-related .product > .p-code { display: none !important; }
+#products.products-related .p .p-desc,
+#products.products-related .p .price-additional,
+#products.products-related .p > .p-code,
+#products.products-related .product > .p-code { display: none !important; }
 
 /* ---- Proč Dei: ikony 80×80 bez podkladu ---- */
 .dei-why-ico {
