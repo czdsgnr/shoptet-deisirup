@@ -4,10 +4,12 @@
    Deploy:  edit → commit → push → ~1-2 min build → refresh
    ============================================================ */
 
-/* ---- Recenze: všechny hvězdičky zlaté ---- */
+/* ---- Recenze i detail produktu: všechny hvězdičky zlaté ---- */
 .dei-stars,
 .dei-reviews-rating .dei-stars,
-.dei-rev .dei-stars {
+.dei-rev .dei-stars,
+.dei-stars-fg,
+.dei-rating .dei-stars-fg {
   color: #FFC107 !important;
 }
 
