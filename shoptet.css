@@ -72,7 +72,7 @@
 #products.products-related .p .ratings-wrapper { margin: 3px 0 4px; }
 #products.products-related .p .p-bottom { margin: 0; }
 #products.products-related .p .prices { margin: 0; }
-#products.products-related .p .price-final strong { font-size: 17px; }
+#products.products-related .p .price-final strong { font-size: 14px !important; }
 /* skladovost zpět – malá, pod cenou */
 #products.products-related .p .p-tools { display: block !important; margin-top: 4px; }
 #products.products-related .p .availability { font-size: 12px; }
