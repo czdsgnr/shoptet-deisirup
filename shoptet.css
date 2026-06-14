@@ -21,6 +21,15 @@
   color: #FFC107 !important;
 }
 
+/* ---- Košík: slevový kupón – žluté pozadí, text ne červený ---- */
+.discount-coupon {
+  background-color: #fdf1c8 !important;
+}
+.discount-coupon .h4,
+.discount-coupon .h4 strong {
+  color: #3a3a3a !important;
+}
+
 /* ---- Řazení produktů: viditelná neaktivní tlačítka + bez uppercase ---- */
 .listSorting__controls .listSorting__control {
   text-transform: none !important;
