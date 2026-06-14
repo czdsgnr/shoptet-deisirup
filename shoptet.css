@@ -74,6 +74,9 @@ body:has(.dei-checkout-support) #header .responsive-tools { display: none !impor
 
 /* skrýt celý horní blok (nadpis „Můj košík" + back + help kontakt) v krocích objednávky */
 body:has(.dei-checkout-support) .cart-header-block { display: none !important; }
+
+/* odsadit obsah od hlavičky, ať to není namáčknuté */
+body:has(.dei-checkout-support) #content-wrapper { margin-top: 60px !important; }
 .dei-checkout-support {
   display: flex;
   align-items: center;
