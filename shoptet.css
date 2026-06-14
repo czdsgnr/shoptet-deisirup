@@ -72,9 +72,8 @@ body:has(.dei-checkout-support) #header .site-name img {
 /* schovat mobilní lištu nástrojů (hamburger/košík) na pokladně */
 body:has(.dei-checkout-support) #header .responsive-tools { display: none !important; }
 
-/* skrýt help blok „Potřebujete pomoci? Jsme tu pro vás:" v krocích objednávky (nahrazuje ho infolinka v hlavičce) */
-body:has(.dei-checkout-support) .cart-header__contact,
-body:has(.dei-checkout-support) .contact-box { display: none !important; }
+/* skrýt celý horní blok (nadpis „Můj košík" + back + help kontakt) v krocích objednávky */
+body:has(.dei-checkout-support) .cart-header-block { display: none !important; }
 .dei-checkout-support {
   display: flex;
   align-items: center;
