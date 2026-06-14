@@ -45,12 +45,23 @@ body:has(.dei-checkout-support) #header .header-top {
   margin: 0 !important;
   box-sizing: border-box;
 }
-/* logo natvrdo vlevo (přebít případné centrování) */
+/* logo natvrdo vlevo + viditelné i na mobilu (motiv ho na malých displejích skrývá) */
 body:has(.dei-checkout-support) #header .site-name-wrapper {
+  display: block !important;
   margin: 0 !important;
   flex: 0 0 auto !important;
   width: auto !important;
   text-align: left !important;
+}
+body:has(.dei-checkout-support) #header .site-name,
+body:has(.dei-checkout-support) #header .site-name a {
+  display: inline-block !important;
+}
+body:has(.dei-checkout-support) #header .site-name img {
+  display: inline-block !important;
+  max-height: 46px !important;
+  width: auto !important;
+  height: auto !important;
 }
 /* schovat mobilní lištu nástrojů (hamburger/košík) na pokladně */
 body:has(.dei-checkout-support) #header .responsive-tools { display: none !important; }
