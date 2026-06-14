@@ -32,9 +32,24 @@ body.ordering-process #header .header-top,
 body.ordering-process #header .navigation-wrapper {
   display: flex !important;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: space-between !important;
+  flex-wrap: nowrap;
+  gap: 16px;
 }
+/* logo natvrdo vlevo (přebít případné centrování) */
+body.ordering-process #header .site-name-wrapper {
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  text-align: left !important;
+}
+/* schovat mobilní lištu nástrojů (hamburger/košík) na pokladně */
+body.ordering-process #header .responsive-tools { display: none !important; }
+/* infolinka vždy vpravo a viditelná i na mobilu */
+.dei-checkout-support { margin-left: auto; }
+
+/* skrýt help blok „Potřebujete pomoc?" v pokladně (nahrazuje ho infolinka) */
+body.ordering-process .contact-box { display: none !important; }
 .dei-checkout-support {
   display: flex;
   align-items: center;
