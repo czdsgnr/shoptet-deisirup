@@ -17,11 +17,11 @@
 .listSorting__controls .listSorting__control {
   text-transform: none !important;
   letter-spacing: 0 !important;
+  border-radius: 8px !important;
 }
 .listSorting__controls .listSorting__control:not(.listSorting__control--current) {
   background-color: #ffffff !important;
   border: 1px solid #e3ded6 !important;
-  border-radius: 999px !important;
   color: #444 !important;
 }
 .listSorting__controls .listSorting__control:not(.listSorting__control--current):hover {
