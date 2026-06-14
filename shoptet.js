@@ -62,6 +62,25 @@
     return true;
   }
 
+  /* ---- Pokladna: zjednodušená hlavička (logo + telefon jako podpora) ---- */
+  function buildCheckoutHeader() {
+    if (!document.body.classList.contains('ordering-process')) return false;
+    var wrap = document.querySelector('#header .header-top') ||
+               document.querySelector('#header .navigation-wrapper');
+    if (!wrap || wrap.querySelector('.dei-checkout-support')) return false;
+    var box = document.createElement('div');
+    box.className = 'dei-checkout-support';
+    box.innerHTML =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.4 1 1 0 0 1-.24 1z"/></svg>' +
+      '<span class="dei-cs-text">' +
+        '<span class="dei-cs-label">Zákaznická podpora</span>' +
+        '<a href="tel:+420606026880" class="dei-cs-phone">+420 606 026 880</a>' +
+      '</span>';
+    wrap.appendChild(box);
+    document.body.classList.add('dei-checkout-ready');
+    return true;
+  }
+
   // Shoptet překresluje obsah login popupu při otevření → re-inject přes observer
   var loginObserver = null;
   function syncLogin() {
@@ -82,11 +101,13 @@
   ready(function () {
     injectOpeningHours();
     syncLogin();
-    // fallback: horní lišta / login se mohou dorenderovat později
+    buildCheckoutHeader();
+    // fallback: horní lišta / login / hlavička se mohou dorenderovat později
     var tries = 0;
     var iv = setInterval(function () {
       injectOpeningHours();
       syncLogin();
+      buildCheckoutHeader();
       if (++tries > 20) clearInterval(iv);
     }, 250);
   });

@@ -21,6 +21,53 @@
   color: #FFC107 !important;
 }
 
+/* ---- Pokladna: zjednodušená hlavička (jen logo + telefon) ---- */
+body.ordering-process .top-navigation-bar,
+body.ordering-process #navigation,
+body.ordering-process #header .search,
+body.ordering-process #header .navigation-buttons {
+  display: none !important;
+}
+body.ordering-process #header .header-top,
+body.ordering-process #header .navigation-wrapper {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.dei-checkout-support {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.dei-checkout-support svg {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  fill: var(--dei-accent, #e8772e);
+}
+.dei-checkout-support .dei-cs-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.dei-checkout-support .dei-cs-label {
+  font-size: 12px;
+  color: #777;
+}
+.dei-checkout-support .dei-cs-phone {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+.dei-checkout-support .dei-cs-phone:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .dei-checkout-support .dei-cs-label { display: none; }
+  .dei-checkout-support .dei-cs-phone { font-size: 16px; }
+}
+
 /* ---- Košík: slevový kupón – žluté pozadí, text ne červený ---- */
 .discount-coupon {
   background-color: #fdf1c8 !important;
