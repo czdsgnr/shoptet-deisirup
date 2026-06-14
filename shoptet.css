@@ -28,12 +28,11 @@ body:has(.dei-checkout-support) #header .search,
 body:has(.dei-checkout-support) #header .navigation-buttons {
   display: none !important;
 }
-/* navigation-wrapper jako blok plné šířky (ať header-top není smrštěný flex item) */
+/* navigation-wrapper jako blok – nechat přirozenou šířku kontejneru (.container = stejná jako obsah) */
 body:has(.dei-checkout-support) #header .navigation-wrapper {
   display: block !important;
-  width: 100% !important;
 }
-/* header-top: logo vlevo v toku, podpora ukotvená napevno vpravo (neprůstřelné) */
+/* header-top: logo vlevo v toku, podpora ukotvená napevno na pravý okraj obsahu */
 body:has(.dei-checkout-support) #header .header-top {
   position: relative !important;
   display: flex !important;
@@ -41,14 +40,13 @@ body:has(.dei-checkout-support) #header .header-top {
   justify-content: flex-start !important;
   flex-wrap: nowrap;
   width: 100% !important;
-  max-width: none !important;
   margin: 0 !important;
-  padding-right: 240px;
+  padding-right: 0 !important;
   box-sizing: border-box;
 }
 body:has(.dei-checkout-support) .dei-checkout-support {
   position: absolute !important;
-  right: 24px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 0 !important;
@@ -108,8 +106,7 @@ body:has(.dei-checkout-support) .contact-box { display: none !important; }
 @media (max-width: 600px) {
   .dei-checkout-support .dei-cs-label { display: none; }
   .dei-checkout-support .dei-cs-phone { font-size: 15px; }
-  body:has(.dei-checkout-support) #header .header-top { padding-right: 160px; }
-  body:has(.dei-checkout-support) .dei-checkout-support { right: 12px; gap: 8px; }
+  body:has(.dei-checkout-support) .dei-checkout-support { right: 0; gap: 8px; }
   body:has(.dei-checkout-support) #header .site-name img { max-height: 38px !important; }
 }
 
