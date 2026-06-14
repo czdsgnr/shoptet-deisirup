@@ -62,12 +62,12 @@
     return true;
   }
 
-  /* ---- Košík (/kosik/): zjednodušená hlavička (logo + telefon jako podpora) ---- */
-  function isCartPage() {
-    return /^\/kosik(\/|$)/.test(location.pathname);
+  /* ---- Kroky objednávky (/objednavka/): zjednodušená hlavička (logo + telefon) ---- */
+  function isCheckoutStep() {
+    return /^\/objednavka\//.test(location.pathname);
   }
   function buildCheckoutHeader() {
-    if (!isCartPage()) return false;
+    if (!isCheckoutStep()) return false;
     var wrap = document.querySelector('#header .header-top') ||
                document.querySelector('#header .navigation-wrapper');
     if (!wrap || wrap.querySelector('.dei-checkout-support')) return false;
@@ -80,7 +80,7 @@
         '<a href="tel:+420606026880" class="dei-cs-phone">+420 606 026 880</a>' +
       '</span>';
     wrap.appendChild(box);
-    document.body.classList.add('dei-checkout-ready');
+    document.body.classList.add('dei-checkout-step');
     return true;
   }
 

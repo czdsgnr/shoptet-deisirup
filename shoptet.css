@@ -21,15 +21,15 @@
   color: #FFC107 !important;
 }
 
-/* ---- Košík /kosik/: zjednodušená hlavička (jen logo + telefon); kroky objednávky nechávají navigaci ---- */
-body.in-kosik .top-navigation-bar,
-body.in-kosik #navigation,
-body.in-kosik #header .search,
-body.in-kosik #header .navigation-buttons {
+/* ---- Kroky objednávky /objednavka/: zjednodušená hlavička (jen logo + telefon); /kosik/ nechává plnou navigaci ---- */
+body.dei-checkout-step .top-navigation-bar,
+body.dei-checkout-step #navigation,
+body.dei-checkout-step #header .search,
+body.dei-checkout-step #header .navigation-buttons {
   display: none !important;
 }
-body.in-kosik #header .header-top,
-body.in-kosik #header .navigation-wrapper {
+body.dei-checkout-step #header .header-top,
+body.dei-checkout-step #header .navigation-wrapper {
   display: flex !important;
   align-items: center;
   justify-content: space-between !important;
@@ -37,19 +37,19 @@ body.in-kosik #header .navigation-wrapper {
   gap: 16px;
 }
 /* logo natvrdo vlevo (přebít případné centrování) */
-body.in-kosik #header .site-name-wrapper {
+body.dei-checkout-step #header .site-name-wrapper {
   margin: 0 !important;
   flex: 0 0 auto !important;
   width: auto !important;
   text-align: left !important;
 }
 /* schovat mobilní lištu nástrojů (hamburger/košík) na pokladně */
-body.in-kosik #header .responsive-tools { display: none !important; }
+body.dei-checkout-step #header .responsive-tools { display: none !important; }
 /* infolinka vždy vpravo a viditelná i na mobilu */
 .dei-checkout-support { margin-left: auto; }
 
 /* skrýt help blok „Potřebujete pomoc?" v pokladně (nahrazuje ho infolinka) */
-body.in-kosik .contact-box { display: none !important; }
+body.dei-checkout-step .contact-box { display: none !important; }
 .dei-checkout-support {
   display: flex;
   align-items: center;
