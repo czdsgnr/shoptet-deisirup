@@ -62,9 +62,12 @@
     return true;
   }
 
-  /* ---- Pokladna: zjednodušená hlavička (logo + telefon jako podpora) ---- */
+  /* ---- Košík (/kosik/): zjednodušená hlavička (logo + telefon jako podpora) ---- */
+  function isCartPage() {
+    return /^\/kosik(\/|$)/.test(location.pathname);
+  }
   function buildCheckoutHeader() {
-    if (!document.body.classList.contains('ordering-process')) return false;
+    if (!isCartPage()) return false;
     var wrap = document.querySelector('#header .header-top') ||
                document.querySelector('#header .navigation-wrapper');
     if (!wrap || wrap.querySelector('.dei-checkout-support')) return false;
