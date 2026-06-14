@@ -13,6 +13,22 @@
   color: #FFC107 !important;
 }
 
+/* ---- Řazení produktů: viditelná neaktivní tlačítka + bez uppercase ---- */
+.listSorting__controls .listSorting__control {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+.listSorting__controls .listSorting__control:not(.listSorting__control--current) {
+  background-color: #ffffff !important;
+  border: 1px solid #e3ded6 !important;
+  border-radius: 999px !important;
+  color: #444 !important;
+}
+.listSorting__controls .listSorting__control:not(.listSorting__control--current):hover {
+  background-color: #f2eee8 !important;
+  border-color: #d3ccc1 !important;
+}
+
 /* ---- Upsell (Ostatní zákazníci také nakoupili) – detail i modal po Do košíku ---- */
 #products.products-related {
   display: flex !important;
