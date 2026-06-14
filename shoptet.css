@@ -33,17 +33,25 @@ body:has(.dei-checkout-support) #header .navigation-wrapper {
   display: block !important;
   width: 100% !important;
 }
-/* header-top = flex řádek přes celou šířku: logo vlevo, podpora vpravo */
+/* header-top: logo vlevo v toku, podpora ukotvená napevno vpravo (neprůstřelné) */
 body:has(.dei-checkout-support) #header .header-top {
+  position: relative !important;
   display: flex !important;
   align-items: center;
-  justify-content: space-between !important;
+  justify-content: flex-start !important;
   flex-wrap: nowrap;
-  gap: 16px;
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
+  padding-right: 240px;
   box-sizing: border-box;
+}
+body:has(.dei-checkout-support) .dei-checkout-support {
+  position: absolute !important;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0 !important;
 }
 /* logo natvrdo vlevo + viditelné i na mobilu (motiv ho na malých displejích skrývá) */
 body:has(.dei-checkout-support) #header .site-name-wrapper {
@@ -65,8 +73,6 @@ body:has(.dei-checkout-support) #header .site-name img {
 }
 /* schovat mobilní lištu nástrojů (hamburger/košík) na pokladně */
 body:has(.dei-checkout-support) #header .responsive-tools { display: none !important; }
-/* infolinka vždy vpravo a viditelná i na mobilu */
-.dei-checkout-support { margin-left: auto; }
 
 /* skrýt help blok „Potřebujete pomoci? Jsme tu pro vás:" v krocích objednávky (nahrazuje ho infolinka v hlavičce) */
 body:has(.dei-checkout-support) .cart-header__contact,
@@ -101,7 +107,10 @@ body:has(.dei-checkout-support) .contact-box { display: none !important; }
 
 @media (max-width: 600px) {
   .dei-checkout-support .dei-cs-label { display: none; }
-  .dei-checkout-support .dei-cs-phone { font-size: 16px; }
+  .dei-checkout-support .dei-cs-phone { font-size: 15px; }
+  body:has(.dei-checkout-support) #header .header-top { padding-right: 160px; }
+  body:has(.dei-checkout-support) .dei-checkout-support { right: 12px; gap: 8px; }
+  body:has(.dei-checkout-support) #header .site-name img { max-height: 38px !important; }
 }
 
 /* ---- Košík: slevový kupón – žluté pozadí, text ne červený ---- */
