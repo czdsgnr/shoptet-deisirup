@@ -77,6 +77,13 @@ body:has(.dei-checkout-support) .cart-header-block { display: none !important; }
 
 /* odsadit obsah od hlavičky, ať to není namáčknuté */
 body:has(.dei-checkout-support) #content-wrapper { margin-top: 60px !important; }
+
+/* hlavička na pokladně NEní fixed (motiv ji dává position:fixed → překrývala obsah při scrollu) */
+body:has(.dei-checkout-support) #header {
+  position: static !important;
+  top: auto !important;
+  transform: none !important;
+}
 .dei-checkout-support {
   display: flex;
   align-items: center;
