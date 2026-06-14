@@ -84,6 +84,8 @@ body:has(.dei-checkout-support) #header {
   top: auto !important;
   transform: none !important;
 }
+/* motiv rezervuje 110px nahoře pro fixní hlavičku → při static je to zbytečná mezera */
+body:has(.dei-checkout-support) .overall-wrapper { padding-top: 0 !important; }
 .dei-checkout-support {
   display: flex;
   align-items: center;
