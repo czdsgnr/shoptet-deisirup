@@ -12,7 +12,12 @@
 .dei-rating .dei-stars-fg,
 .products-block .stars-wrapper .star-list,
 .stars-wrapper .star-list,
-.stars-wrapper .star {
+.stars-wrapper .star,
+.products-block .stars-wrapper .star.star-on::before,
+.products-block .stars-wrapper .star.star-half::before,
+.stars-wrapper .star.star-on::before,
+.stars-wrapper .star.star-half::before,
+.stars-wrapper .star::before {
   color: #FFC107 !important;
 }
 
