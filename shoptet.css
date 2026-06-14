@@ -22,42 +22,44 @@
 }
 
 /* ---- Kroky objednávky /objednavka/: zjednodušená hlavička (jen logo + telefon); /kosik/ nechává plnou navigaci ---- */
-body.dei-checkout-step .top-navigation-bar,
-body.dei-checkout-step #navigation,
-body.dei-checkout-step #header .search,
-body.dei-checkout-step #header .navigation-buttons {
+body:has(.dei-checkout-support) .top-navigation-bar,
+body:has(.dei-checkout-support) #navigation,
+body:has(.dei-checkout-support) #header .search,
+body:has(.dei-checkout-support) #header .navigation-buttons {
   display: none !important;
 }
-body.dei-checkout-step #header .header-top,
-body.dei-checkout-step #header .navigation-wrapper {
+/* navigation-wrapper jako blok plné šířky (ať header-top není smrštěný flex item) */
+body:has(.dei-checkout-support) #header .navigation-wrapper {
+  display: block !important;
+  width: 100% !important;
+}
+/* header-top = flex řádek přes celou šířku: logo vlevo, podpora vpravo */
+body:has(.dei-checkout-support) #header .header-top {
   display: flex !important;
   align-items: center;
   justify-content: space-between !important;
   flex-wrap: nowrap;
   gap: 16px;
   width: 100% !important;
-  max-width: 1200px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 /* logo natvrdo vlevo (přebít případné centrování) */
-body.dei-checkout-step #header .site-name-wrapper {
+body:has(.dei-checkout-support) #header .site-name-wrapper {
   margin: 0 !important;
   flex: 0 0 auto !important;
   width: auto !important;
   text-align: left !important;
 }
 /* schovat mobilní lištu nástrojů (hamburger/košík) na pokladně */
-body.dei-checkout-step #header .responsive-tools { display: none !important; }
+body:has(.dei-checkout-support) #header .responsive-tools { display: none !important; }
 /* infolinka vždy vpravo a viditelná i na mobilu */
 .dei-checkout-support { margin-left: auto; }
 
 /* skrýt help blok „Potřebujete pomoci? Jsme tu pro vás:" v krocích objednávky (nahrazuje ho infolinka v hlavičce) */
-body.dei-checkout-step .cart-header__contact,
-body.dei-checkout-step .contact-box { display: none !important; }
+body:has(.dei-checkout-support) .cart-header__contact,
+body:has(.dei-checkout-support) .contact-box { display: none !important; }
 .dei-checkout-support {
   display: flex;
   align-items: center;
