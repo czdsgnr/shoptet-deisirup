@@ -35,6 +35,13 @@ body.dei-checkout-step #header .navigation-wrapper {
   justify-content: space-between !important;
   flex-wrap: nowrap;
   gap: 16px;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /* logo natvrdo vlevo (přebít případné centrování) */
 body.dei-checkout-step #header .site-name-wrapper {
@@ -48,7 +55,8 @@ body.dei-checkout-step #header .responsive-tools { display: none !important; }
 /* infolinka vždy vpravo a viditelná i na mobilu */
 .dei-checkout-support { margin-left: auto; }
 
-/* skrýt help blok „Potřebujete pomoc?" v pokladně (nahrazuje ho infolinka) */
+/* skrýt help blok „Potřebujete pomoci? Jsme tu pro vás:" v krocích objednávky (nahrazuje ho infolinka v hlavičce) */
+body.dei-checkout-step .cart-header__contact,
 body.dei-checkout-step .contact-box { display: none !important; }
 .dei-checkout-support {
   display: flex;
