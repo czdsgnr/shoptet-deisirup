@@ -18,7 +18,13 @@
 }
 .dei-about__row--reverse { flex-direction: row-reverse; }
 .dei-about__text { flex: 1 1 50%; }
-.dei-about__media { flex: 1 1 50%; }
+.dei-about__media { flex: 1 1 50%; text-align: center; }
+.dei-about__imglink {
+  display: block;
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+}
+.dei-about__imglink:hover { transform: translateY(-5px); }
 .dei-about__media img {
   width: 100%;
   height: auto;
@@ -26,6 +32,19 @@
   border-radius: 20px;
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
 }
+.dei-about__buy {
+  display: inline-block;
+  margin-top: 18px;
+  background: var(--dei-accent, #e8772e);
+  color: #fff;
+  padding: 11px 28px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter 0.15s;
+}
+.dei-about__buy:hover { filter: brightness(0.94); color: #fff; }
 .dei-about__kicker {
   display: inline-block;
   font-size: 13px;
