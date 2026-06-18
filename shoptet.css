@@ -5,23 +5,24 @@
    ============================================================ */
 
 /* ---- USP ikony v horním popisu produktu (editor Shoptetu maže inline SVG) ---- */
-/* vykreslíme je z CSS; jen u prázdného boxu, ať se nezdvojí tam, kde SVG zůstalo */
-.dei-usp-ico:empty {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 26px 26px;
+/* ikonu kreslíme z CSS vždy; případný zbytek uvnitř boxu skryjeme */
+.dei-usp-ico {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 26px 26px !important;
 }
-.dei-usp-item:nth-child(1) .dei-usp-ico:empty {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8772e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16l-8 9z'/%3E%3Cpath d='M12 13v6'/%3E%3Cpath d='M8 21h8'/%3E%3C/svg%3E");
+.dei-usp-ico > * { display: none !important; }
+.dei-usp-item:nth-child(1) .dei-usp-ico {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8772e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16l-8 9z'/%3E%3Cpath d='M12 13v6'/%3E%3Cpath d='M8 21h8'/%3E%3C/svg%3E") !important;
 }
-.dei-usp-item:nth-child(2) .dei-usp-ico:empty {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8772e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E");
+.dei-usp-item:nth-child(2) .dei-usp-ico {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8772e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E") !important;
 }
-.dei-usp-item:nth-child(3) .dei-usp-ico:empty {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8772e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='5' width='14' height='14' rx='2'/%3E%3Cline x1='4' y1='4' x2='20' y2='20'/%3E%3C/svg%3E");
+.dei-usp-item:nth-child(3) .dei-usp-ico {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8772e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='5' width='14' height='14' rx='2'/%3E%3Cline x1='4' y1='4' x2='20' y2='20'/%3E%3C/svg%3E") !important;
 }
-.dei-usp-item:nth-child(4) .dei-usp-ico:empty {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8772e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 7l5 5 3-3 4 4 6-8'/%3E%3C/svg%3E");
+.dei-usp-item:nth-child(4) .dei-usp-ico {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8772e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 7l5 5 3-3 4 4 6-8'/%3E%3C/svg%3E") !important;
 }
 
 /* ---- O nás: zig-zag layout (text ↔ fotka) ---- */
